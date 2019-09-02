@@ -16,7 +16,9 @@ public class A1Adept {
 		double[] price = new double[item_count]; 
 		for (int i = 0; i < item_count; i++) {
 			scan = new Scanner(System.in);
+			
 			name[i] = scan.next();
+			
 			price[i] = scan.nextDouble();
 		}
 		scan = new Scanner (System.in);
@@ -25,12 +27,10 @@ public class A1Adept {
 		String[] lname = new String[num_of_customers];
 		double[] count = new double[num_of_customers];
 		for (int i = 0; i < num_of_customers; i++) {
-			scan = new Scanner (System.in);
 			customer[i] = scan.next();			
 			lname[i] = scan.next();
 			int items = scan.nextInt();
 			for (int n = 0; n < items; n++) {
-				scan = new Scanner (System.in);
 				int num_each = scan.nextInt();
 				String item_name = scan.next();
 				int index = findIndex(name, item_name);

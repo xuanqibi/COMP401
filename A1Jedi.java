@@ -16,23 +16,22 @@ public class A1Jedi {
 		double[] price = new double[item_count]; 
 		for (int i = 0; i < item_count; i++) {
 			scan = new Scanner(System.in);
+			
 			name[i] = scan.next();
+			
 			price[i] = scan.nextDouble();
 		}
-		scan = new Scanner (System.in);
 		int num_of_customers = scan.nextInt();
 		String[] customer = new String[num_of_customers];
 		String[] lname = new String[num_of_customers];
 		int[] count = new int[item_count];
 		int[] customer_count = new int[item_count];
 		for (int i = 0; i < num_of_customers; i++) {
-			scan = new Scanner (System.in);
 			customer[i] = scan.next();			
 			lname[i] = scan.next();
 			int items = scan.nextInt();
 			int[] customer_index = new int[item_count];
 			for (int n = 0; n < items; n++) {
-				scan = new Scanner (System.in);
 				int num_each = scan.nextInt();
 				String item_name = scan.next();
 				int index = findIndex(name, item_name);
